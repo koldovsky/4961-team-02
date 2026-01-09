@@ -34,3 +34,4 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Ruslan Sevastianov
 - Ihor Tsiupka
 - Vlad Paliichuk
+- Bohdan Salnyk

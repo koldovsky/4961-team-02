@@ -1,0 +1,57 @@
+.header .header__nav {
+   display: flex !important;   
+   align-items: center;
+   justify-content: space-between;
+   gap: 1rem;
+   padding: 0.5rem 1rem;   
+   background-size: cover;
+   background-position: center;
+   font-family: 'Rubik', sans-serif;
+   color: #FFFFFF;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.header__logo {
+   display: inline-block;
+   max-width: none;
+   width: 120px;
+   height: auto;
+   object-fit: contain;   
+}
+
+.header__socials-icon {
+   display: inline-block;
+   max-width: none;
+   width: 30px;
+   height: 30px;
+   object-fit: contain;
+}
+
+.header__banner, .header__menu, .header__socials {
+   display: flex;
+   gap: 0.75rem;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   align-items: center;
+   font-family: 'Rubik', sans-serif;
+   color: #FFFFFF;
+}
+
+/* Banner sits above the nav and keeps its two children inline */
+.header__banner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+   background-color: #c17f2e;
+   padding: 5px 1rem; /* 5px top/bottom as requested */
+   color: #ffffff;
+}
+
+.header__banner-text,
+.header__banner-contact { margin: 0; }

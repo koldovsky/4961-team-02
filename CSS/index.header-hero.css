@@ -1,0 +1,47 @@
+.header-hero {
+  background-image: url("../img/global/hero-background.png");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Rubik', sans-serif;
+  color: #FFFFFF;
+}
+
+.header-hero h1,
+.header-hero h2,
+.header-hero p,
+.header-hero a,
+.header-hero .header-hero__button {
+  color: inherit;
+}
+
+/* Make header a positioning context and keep nav above the pseudo background */
+.header {
+  position: relative;
+  z-index: 0;
+}
+.header nav {
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.header-hero {
+  position: relative;
+  z-index: 1;
+}
+
+/* Extend the hero background upward behind the header/nav using a pseudo-element.
+   Adjust --header-nav-height if your nav is a different height. */
+.header-hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--header-nav-height, 55px));
+  height: calc(100% + var(--header-nav-height, 55px));
+  background-image: url("../img/global/hero-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

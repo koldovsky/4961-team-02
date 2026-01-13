@@ -18,6 +18,18 @@
     --link-color: #4b4b4b;
     /* Колір акценту (золотистий/коричневий для заголовків та цифр) */
     --accent-color: #c17f2e;
+    /* Основний колір заднього фону */
+    --background-main-color: #f7f8fa;
+    /* Колір sale тегу */
+    --sale-tag-bg-color: #464c5c;
+    --sale-tag-color: #ffffff;
+    /* Колір тексту кнопки */
+    --button-text-color: #ffffff;
+    --button-bg-color: #c17f2e;
+    --catalog-navbar-color: #0e0e0e1a;
+    /* Шрифти проекту */
+    --main-font-family: "Rubik";
+    --secondary-font-family: "Montserrat";
 
     scroll-behavior: smooth;
 }
@@ -26,6 +38,27 @@ img {
     display: block;
     height: auto;
     max-width: 100%;
+}
+
+ul, 
+ol {
+    list-style-type: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--main-font-family), sans-serif;
+    color: var(--secondary-text-color);
+    background-color: var(--background-main-color);
+}
+
+.container {
+    max-width: 20rem;
+    margin-inline: auto;
 }
 
 /*Here are both of the fonts used in the project, already added to the index.html: 

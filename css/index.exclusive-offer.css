@@ -1,0 +1,65 @@
+.exclusive-offer__label {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--accent-color);
+}
+.exclusive-offer__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Rubik", sans-serif;
+    color: var(--text-color);
+}
+.exclusive-offer__description {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    color: var(--secondary-text-color);
+}
+.exclusive-offer__card-title {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Rubik", sans-serif;
+    color: var(--text-color);
+}
+.exclusive-offer__card-text {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-text-color);
+}
+.exclusive-offer__link {
+    font-weight: bold;
+    width: fit-content; 
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--link-color); 
+}
+.exclusive-offer__stats-value {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Rubik", sans-serif;
+    color: var(--accent-color);
+}
+.exclusive-offer__stats-name{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+    font-family: "Rubik", sans-serif;
+    color: #727272;
+}
+.exclusive-offer__stats-description {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-text-color);
+}
+
+.exclusive-offer__link:hover {
+    text-decoration: underline;
+}

@@ -2,6 +2,10 @@
     width: 100%;
     background-color: #0e0e0e;
 
+    @media (max-width: 767px) {
+        height: 1138px;
+    }
+
     .footer__content-container {
         max-width: 1200px;
         height: 370px;
@@ -9,6 +13,11 @@
 
         .footer__content-nav-container {
             display: flex;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+
             justify-content: space-between;
             padding: 80px 15px 30px 15px;
 
@@ -24,6 +33,10 @@
                 color: #ffffff;
                 font-size: 24px;
                 font-family: var(--main-font-family);
+
+                @media (max-width: 767px) {
+                    margin: auto;
+                }
             }
 
             .footer__socials-icons-container {
@@ -34,6 +47,10 @@
 
             .footer__socials-description {
                 color: #ffffff;
+
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
             }
 
 
@@ -46,6 +63,7 @@
             .footer__socials-description {
                 font-size: 15px;
                 font-family: var(--secondary-font-family);
+
             }
 
             .footer__link {
@@ -59,6 +77,11 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @media (max-width: 767px) {
+                    align-items: center;
+                    margin: auto;
+                }
             }
 
             .footer__subscribe-container {
@@ -66,6 +89,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+
+                @media (max-width: 767px) {
+                    margin: auto;
+                }
 
                 .footer__header-menu-nav {
                     flex: 1;
@@ -83,6 +110,10 @@
                         padding: 15px 26px;
                         background-color: #272727;
                         border: 0;
+
+                        @media (max-width: 767px) {
+                            width: 100%;
+                        }
                     }
 
                     .footer__form-input::placeholder {
@@ -95,6 +126,10 @@
                         font-size: 15px;
                         font-family: var(--secondary-font-family);
                         font-weight: 600;
+
+                        @media (max-width: 767px) {
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -114,6 +149,10 @@
             justify-content: space-between;
             height: 72px;
             margin-top: 5px;
+
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
 
             .footer__authorship-icon-container,
             .footer__authorship-description {

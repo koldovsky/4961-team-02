@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');/*Montserrat*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');/*Rubik*/
+/*Here are both of the fonts used in the project:*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+/*font-family: 'Rubik', sans-serif;*/
 
 *,
 *::after,
@@ -10,6 +13,29 @@
 }
 
 :root {
+    /* Основний колір тексту (заголовки) */
+    --text-color: #0e0e0e; 
+    /* Колір другорядного тексту (описи та підписи) */
+    --secondary-text-color: #4e515b;
+    /* Колір лінків та додаткових елементів */
+    --link-color: #4b4b4b;
+    /* Колір акценту (золотистий/коричневий для заголовків та цифр) */
+    --accent-color: #c17f2e;
+    /* Основний колір заднього фону */
+    --background-main-color: #f7f8fa;
+    /*Колір заднього фону секції*/
+    --color-bg-section: #0b0b0b;
+    /* Колір sale тегу */
+    --sale-tag-bg-color: #464c5c;
+    --sale-tag-color: #ffffff;
+    /* Колір тексту кнопки */
+    --button-text-color: #ffffff;
+    --button-bg-color: #c17f2e;
+    --catalog-navbar-color: #0e0e0e1a;
+    /* Шрифти проекту */
+    --main-font-family: "Rubik";
+    --secondary-font-family: "Montserrat";
+
     scroll-behavior: smooth;
 }
 
@@ -19,8 +45,23 @@ img {
     max-width: 100%;
 }
 
-/*Here are both of the fonts used in the project, already added to the index.html: 
+ul, 
+ol {
+    list-style-type: none;
+}
 
-  font-family: 'Rubik', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-*/
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--main-font-family), sans-serif;
+    color: var(--secondary-text-color);
+    background-color: var(--background-main-color);
+}
+
+.container {
+    max-width: 20rem;
+    margin-inline: auto;
+}

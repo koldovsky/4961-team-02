@@ -1,5 +1,12 @@
-.rare-timepieces {
-    --color-bg-section: #0b0b0b;
-    background-color: var(--color-bg-section);
-    outline: 5px solid red;
+.rare-timepieces__content {
+    background-color: var(--color-bg-section-dark);
+    padding: 60px 0px;
+}
+      
+.rare-timepieces__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+    font-family: var(--secondary-font-family), sans-serif;
+    color: var(--accent-color);
 }

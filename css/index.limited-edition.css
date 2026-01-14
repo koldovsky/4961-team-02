@@ -1,0 +1,4 @@
+.rare-timepieces__content {
+    --color-bg-section: ##0b0b0b;
+    background-color: var(--color-bg-section);
+}

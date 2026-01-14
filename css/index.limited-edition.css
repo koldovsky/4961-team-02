@@ -59,6 +59,26 @@
       font-size: 14px;
       text-align: center;
       display: inline-block;
+      text-decoration: none;
+    }
+
+    .rare-timepieces__button:hover {
+      color: var(--sale-tag-color);
+      text-decoration: none;
+    }
+  }
+
+  .watch-card {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 24px;
+    justify-items: center;
+
+    .watch-card__title, .watch-card__price, .watch-card__link {
+    color: var(--sale-tag-color);
+    font-size: 14px;
+    font-family: var(--main-font-family), sans-serif;
     }
   }
 }

@@ -1,15 +1,99 @@
+.featured-item{
+    /*outline: 1px solid red;*/
+    min-width: 320px
+}
+
+.featured-item__main{
+    padding: 90px 30px 90px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 21px;
+    justify-content: flex-start;
+}
+
 .featured-item__title {
-    color: #c17f2e;
+    text-align: center;
+    color: var(--accent-color);
     font-size: 10px;
-    font-family: Montserrat, sans-serif;
+    font-family: var(--secondary-font-family), sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .featured-item__subtitle {
+    color: var(--text-color);
+    text-align: center;
     text-transform: uppercase;
-    font-size: 52px;
-    font-family: Rubik, sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-family: var(--main-font-family), sans-serif;
 }
 
 .featured-item__subtitle-main {
     font-style: italic;
+}
+
+.featured-item__description {
+    text-align: center;
+    color: var(--secondary-text-color);
+    font-size: 18px;
+    font-family: var(--main-font-family), sans-serif;
+    line-height: 23.4px;
+}
+.featured-item__price,
+.featured-item__details,
+.featured-item__features,
+.featured-item__link {
+    text-align: center;
+}
+
+.featured-item__price-text, 
+.featured-item__details,
+.featured-item__feature {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-font-family), sans-serif;
+    line-height: 21px;
+}
+
+.featured-item__price-text {
+    font-style: italic;
+}
+
+.featured-item__price-value {
+    font-size: 22px;
+    color: var(--sale-tag-color);
+    font-family: var(--secondary-font-family), sans-serif;
+    font-weight: 700;
+    background-color: var(--accent-color);
+    line-height: 33px;    
+}
+
+.featured-item__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.featured-item__feature {
+    padding: 2.5px;
+}
+
+
+.featured-item__link-text{
+    font-size: 14px;
+    color: var(--accent-color);
+    font-family: var(--secondary-font-family), sans-serif;
+    font-weight: 700;
+    margin-right: 8px;
+}
+.featured-item__link-icon {
+    color: var(--accent-color);
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
 }

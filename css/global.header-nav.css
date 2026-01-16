@@ -1,43 +1,30 @@
-.header .header__nav {
+.header .header__banner {
+   background-color: var(--accent-color);
+   color: var(--header-text-color);
+   z-index: 3;
+   padding: 1px;
+}
+
+.header .header__banner > .container {
    display: flex;
-   flex-direction: column;
-   align-items: center;
+   flex-direction: row;
    justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.header .header__nav-main {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   align-content: center;
    gap: 1rem;
-   padding: 0.5rem 16px;
-   padding-top: calc(5px * 2 + 1.5em + 0.5rem);
-   font-family: 'Rubik', sans-serif;
-   color: #FFFFFF;
+   color: var(--header-text-color);
    position: relative;
    min-height: 70px;
+   max-width: 1200px;
+   margin: auto;
 }
-
-/* Banner positioned absolutely, full width, above nav content */
-.header .header__banner {
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   display: flex;
-   justify-content: space-between;
-   gap: 0.75rem;
-   align-items: center;
-   background-color: #c17f2e;
-   padding: 5px 16px;
-   color: #ffffff;
-   font-family: 'Montserrat', sans-serif;
-   z-index: 3;
-   box-sizing: border-box;
-}
-
-.header__banner-text  {
-     margin-left: 16px;
-  }
-  
-.header__banner-contact {
-     margin-right: 16px;
-  }
-
 
 /* Scoped link styling for header */
 .header__nav a,
@@ -57,6 +44,18 @@
    outline: 2px solid currentColor;
    outline-offset: 2px;
    border-radius: 2px;
+}
+
+/* Use theme accent color on hover/focus for menu and socials */
+.header__menu-link:hover,
+.header__menu-link:focus-visible,
+.header__banner a:hover {
+   color: var(--accent-color);
+}
+
+.header__socials-link:hover,
+.header__socials-link:focus-visible {
+   color: var(--accent-color);
 }
 
 .header__logo {
@@ -88,24 +87,28 @@
 .header__socials-link:hover .header__socials-icon {
    transform: scale(1.1);
    opacity: 0.9;
+   color: var(--accent-color);
 }
 
 .header__socials-link:focus-visible {
    outline: 2px solid currentColor;
    outline-offset: 2px;
    border-radius: 4px;
+   color: var(--accent-color);
 }
 
-.header__banner, .header__menu, .header__socials {
-   display: flex;
+.header .header__banner, .header__menu, .header__socials {
    gap: 0.75rem;
    list-style-type: none;
-   margin: 0;
    align-items: center;
    font-family: 'Montserrat', sans-serif;
-   font-size: 0.75rem;
+   font-size: 0.7rem;
    font-weight: bold;
-   color: #FFFFFF;
+   color: var(--header-text-color);
+}
+
+.header .header__menu, .header__socials {
+   display: inline-flex;
 }
 
 .header__menu-link {
@@ -116,6 +119,7 @@
 
 .header__menu-link:hover {
    opacity: 0.8;
+   color: var(--accent-color);
 }
 
 .header__menu-link::after {
@@ -137,24 +141,18 @@
    outline: 2px solid currentColor;
    outline-offset: 2px;
    border-radius: 2px;
+   color: var(--accent-color);
 }
 
-@media (min-width: 768px) {
-   .header .header__nav {
+@media (min-width: 64rem) {
+   .header__banner {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+   }
+   .header .header__nav-main {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem 64px;
-  }
-  .header .header__banner {
-    padding: 5px 64px;
-  }
-  .header .header__banner-text  {
-     margin-left: 64px;
-  }
-  
-  .header .header__banner-contact {
-     margin-right: 64px;
   }
 }

@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chronovia</title>
-    <link rel="shortcut icon" href="img/global/chronovia-shortcut-icon.png" type="image/x-icon">
-    <script src="https://unpkg.com/htmx.org@1.9.10"
-        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/index.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="img/global/chronovia-shortcut-icon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Tsiupka Ihor -->
     <header class="header">
-        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
-        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-hero.partial.html"></div>        
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header-hero.partial.html"
+      ></div>
     </header>
     <main class="main">
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.about-section.partial.html"></section>
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.exclusive-offer.partial.html"></section>
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.limited-edition.partial.html"></section>
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.featured-item.partial.html"></section>
-        <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.catalog-section.partial.html"></section>
+      <!-- Paliichuk Vladyslav -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.about-section.partial.html"
+      ></section>
+      <!-- Teodorovych Maksym -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.exclusive-offer.partial.html"
+      ></section>
+      <!-- Liulyk Mariana -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.limited-edition.partial.html"
+      ></section>
+      <!-- Bilan Andrii -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.featured-item.partial.html"
+      ></section>
+      <!-- Salnyk Bohdan -->
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.catalog-section.partial.html"
+      ></section>
     </main>
-    <footer 
-        class="footer"
-        data-hx-trigger="load" 
-        data-hx-swap="outerHTML" 
-        data-hx-get="global.footer.partial.html"
-    >
-    </footer>
-</body>
-
+    <!-- Sevastianov Ruslan -->
+    <footer
+      class="footer"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+  </body>
 </html>

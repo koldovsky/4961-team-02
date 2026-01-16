@@ -133,7 +133,7 @@
               .watch-card__image {
                 display: block;
                 width: 100%;
-               height: auto;
+                height: auto;
               }
             }
           }
@@ -152,13 +152,13 @@
     grid-template-columns: minmax(16rem, 18rem) minmax(0, 1fr);
     align-items: start;
     gap: 2.5rem;
-  }
 
-  .rare-timepieces__title,
-  .rare-timepieces__subtitle,
-  .rare-timepieces__lead,
-  .rare-timepieces__description {
-    text-align: left;
+    .rare-timepieces__title,
+    .rare-timepieces__subtitle,
+    .rare-timepieces__lead,
+    .rare-timepieces__description {
+      text-align: left;
+    }
   }
 
   .rare-timepieces__carousel {

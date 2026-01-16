@@ -5,6 +5,7 @@
 
   .rare-timepieces__content {
     display: flex;
+    flex-direction: column;
     gap: 2.5rem;
 
     .rare-timepieces__intro {
@@ -12,6 +13,8 @@
       gap: 1.5rem;
       padding: 0 1rem;
       text-align: center;
+      max-width: 20rem;
+      margin-inline: auto;
 
       .rare-timepieces__title {
         text-transform: uppercase;
@@ -48,7 +51,7 @@
         max-width: 13.75rem;
         background-color: var(--button-bg-color);
         margin: auto;
-        padding: 1rem;
+        padding: 1.25rem;
         transition: background-color 0.3s ease;
 
         .rare-timepieces__button {
@@ -77,6 +80,7 @@
       position: relative;
       overflow: hidden;
       min-width: 0;
+      margin-top: 2rem;
 
       .rare-timepieces__control {
         display: none;
@@ -91,7 +95,7 @@
         -webkit-overflow-scrolling: touch;
 
         .rare-timepieces__item {
-          flex: 0 0 15rem;
+          flex: 0 0 85%;
           scroll-snap-align: start;
 
           .watch-card {
@@ -181,16 +185,16 @@
         border: none;
         color: var(--sale-tag-color);
         cursor: pointer;
-      }
 
-      .rare-timepieces__control--prev {
-      left: 0;
-      }
+        &--prev {
+          left: 0;
+        }
 
-      .rare-timepieces__control--next {
-       right: 0;
+        &--next {
+          right: 0;
+        }
       }
-  
+ 
       .rare-timepieces__list {
         padding-inline: 3rem;
         overflow: hidden;

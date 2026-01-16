@@ -1,15 +1,13 @@
+/* Bilan Andrii */
 .featured-item{
-    /*outline: 1px solid red;*/
-    min-width: 320px
+    outline: 1px solid red;
+    min-width: 320px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .featured-item__main{
     padding: 90px 30px 90px 30px;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    gap: 21px;
-    justify-content: flex-start;
 }
 
 .featured-item__title {
@@ -23,30 +21,38 @@
 }
 
 .featured-item__subtitle {
+    margin-top: 20px;
     color: var(--text-color);
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     line-height: 36px;
     font-family: var(--main-font-family), sans-serif;
+    .featured-item__subtitle-main {
+    font-style: italic;
+    }
 }
 
-.featured-item__subtitle-main {
+.featured-item__price{
+    margin-top: 25px;
+    text-align: center;
+    .featured-item__price-text {
     font-style: italic;
+    }
 }
+
 
 .featured-item__description {
+    margin-top: 20px;
     text-align: center;
     color: var(--secondary-text-color);
     font-size: 18px;
     font-family: var(--main-font-family), sans-serif;
     line-height: 23.4px;
 }
-.featured-item__price,
-.featured-item__details,
-.featured-item__features,
-.featured-item__link {
+.featured-item__details {
     text-align: center;
+    margin-top: 25px;
 }
 
 .featured-item__price-text, 
@@ -72,10 +78,12 @@
 }
 
 .featured-item__features {
+    text-align: center;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 11px;
     
 }
 
@@ -83,17 +91,40 @@
     padding: 2.5px;
 }
 
+.featured-item__link-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.featured-item__link {
+    padding: 15px 26px;
+    border-width: 2px;
+    border-style: solid;
+    color: var(--accent-color);
+}
+
+.featured-item__link:active {
+    background-color: var(--accent-color);
+    color: var(--background-main-color);
+}
 
 .featured-item__link-text{
     font-size: 14px;
-    color: var(--accent-color);
+    
     font-family: var(--secondary-font-family), sans-serif;
     font-weight: 700;
-    margin-right: 8px;
 }
 .featured-item__link-icon {
-    color: var(--accent-color);
-    font-size: 14px;
+    
+    transform: translateY(30%);
     width: 24px;
     height: 24px;
+}
+
+.featured-item__image {
+    margin-top: 20px;
+    object-position: 69.826% 36.725%;
+    width: 100%;
+    aspect-ratio: 320 / 192;
+    object-fit: cover;
+    
 }

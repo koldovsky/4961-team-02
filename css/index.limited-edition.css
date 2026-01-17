@@ -231,6 +231,10 @@
     max-width: 13rem;
   }
 
+  .rare-timepieces__control {
+    top: 45%;
+  }
+
   .rare-timepieces__control--prev {
     left: -1rem;
   }

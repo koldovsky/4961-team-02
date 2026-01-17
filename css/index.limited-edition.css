@@ -28,21 +28,21 @@
 
     .rare-timepieces__subtitle {
       text-transform: uppercase;
-      font-size: 2.25rem;
+      font-size: 1.5rem;
       font-family: var(--main-font-family), sans-serif;
       color: var(--sale-tag-color);
       text-align: center;
     }
 
     .rare-timepieces__lead {
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-family: var(--main-font-family), sans-serif;
       color: var(--sale-tag-color);
       text-align: center;
     }
 
     .rare-timepieces__description {
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       font-family: var(--secondary-font-family), sans-serif;
       color: var(--sale-tag-color);
       text-align: center;
@@ -148,18 +148,42 @@
 }
 
 @media (min-width: 64rem) {
+  .container {
+    max-width: 80rem;
+  }
+
   .rare-timepieces__content {
     display: grid;
     grid-template-columns: 18rem 1fr;
-    gap: 3rem;
-    align-items: center;
-  }
+    gap: 0;
+    align-items: start;
 
-  .rare-timepieces__intro {
-    max-width: 18rem;
-    padding-inline: 0;
-    margin: 0;
-    text-align: left;
+    .rare-timepieces__intro {
+      max-width: 18rem;
+      padding-inline: 0;
+      margin: 0;
+      text-align: left;
+
+      .rare-timepieces__title {
+        text-align: left;
+      }
+
+      .rare-timepieces__subtitle {
+        text-align: left;
+      }
+
+      .rare-timepieces__lead {
+        text-align: left;
+      }
+
+      .rare-timepieces__description {
+        text-align: left;
+      }
+      .rare-timepieces__actions {
+        text-align: left;
+        margin-inline: 0;
+      }
+    }
   }
 
   .rare-timepieces__carousel {
@@ -168,7 +192,7 @@
 
   .rare-timepieces__list {
     grid-template-columns: repeat(4, 1fr);
-    padding-inline: 0,5rem;
+    padding-inline: 0.5rem;
     gap: 1rem;
   }
 

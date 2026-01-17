@@ -1,13 +1,13 @@
 .rare-timepieces {
-  padding-top: 3.75rem;
-  padding-bottom: 3.75rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   background-color: var(--color-bg-section);
 }
 
 .rare-timepieces__content {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 
   .rare-timepieces__intro {
     display: grid;
@@ -85,10 +85,11 @@
 .rare-timepieces__list {
   display: flex;
   gap: 1.5rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 1rem;
 }
 
 .rare-timepieces__list::-webkit-scrollbar {
@@ -130,13 +131,7 @@
 }
 
 .rare-timepieces__control {
-  display: visible;
-}
-
-@media (min-width: 64rem) {
-  .container {
-    padding-inline: 1rem;
-  }
+  visibility: visible;
 }
 
 @media (min-width: 48rem) {
@@ -173,7 +168,7 @@
 
   .rare-timepieces__list {
     grid-template-columns: repeat(4, 1fr);
-    padding-inline: 3rem;
+    padding-inline: 0,5rem;
     gap: 1rem;
   }
 
@@ -184,24 +179,26 @@
   .rare-timepieces__control {
     display: flex;
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     width: 2.5rem;
     height: 2.5rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-bg-section);
+    background-color: transparent;
     border: none;
     color: var(--sale-tag-color);
     cursor: pointer;
     z-index: 10;
+    font-size: 2rem;
+    line-height: 1;
   }
 
   .rare-timepieces__control--prev {
-    left: 0;
+    left: 0.1rem;
   }
 
   .rare-timepieces__control--next {
-    right: 0;
+    right: -0.2rem;
   }
 }

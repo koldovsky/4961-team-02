@@ -1,7 +1,6 @@
-/* Make header a positioning context and keep nav above the pseudo background */
 .header {
   position: relative;
-  z-index: 0;
+  margin-bottom: -5rem; /* to account for the background image */
 }
 
 .header-hero__title,
@@ -21,39 +20,46 @@
   font-size: 18px;
 }
 
-.header__nav {
-  background: transparent;
-  position: relative;
-  z-index: 2;
-  min-height: 80px;
-}
 
 .header-hero {
   position: relative;
   z-index: 1;
   color: var(--header-text-color);
   height: 60rem;
-  max-height: 990px;
+  max-height: 1038px;
+  max-width: inherit;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
+  flex: 1;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
 }
-/* Extend the hero background upward behind the header/nav using a pseudo-element.
-   Adjust --header-nav-height if your nav is a different height. */
-.header-hero::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -11rem;
-  height: 100%;
+
+.header-hero__background {
+  position: relative;
+  margin-top: -11rem;
+  padding-top: 11rem;
+  min-height: calc(100% + 11rem);
+  width: 100%;
   background-image: url("../img/global/hero-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.header-hero__background .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header__nav {
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  min-height: 80px;
 }
 
 .header-hero h1.header-hero__title,
@@ -75,7 +81,7 @@
   margin-top: 24px;
 }
 
-.header-hero__col {
+.header-hero {
   display: flex;
   flex-direction: column;
   align-self: stretch;
@@ -119,41 +125,41 @@
 }
 
 @media (min-width: 64rem) {
-  .header-hero {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-    padding: 2rem 64px;
-  }
-  .header-hero__col {
+  .header-hero > .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
+    padding: 2rem 64px;
     margin-bottom: 5rem;
+    margin-top: 5rem;
     gap: 1rem;
   }
-  .header-hero__col .container {
-    flex: 1;
-    max-width: none;
-    margin: 0;
-  }
-  .header-hero__col .header-hero__col--left {
+  .header-hero .header-hero__col--left {
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     max-width: 40%;
+    gap: 2rem;
   }
-  .header-hero__col .header-hero__col--right {
+  .header-hero__col--right {
+    display: flex;
+    flex-direction: column;
     align-items: flex-end;
     font-size: 1.1rem;
+    gap: 1rem;
+    /* Mirror the left-sided margin on the right */
+    margin-right: 0;
+  }
+  .header-hero__col--right .header-hero__discount {
+    align-self: flex-end;
+    margin-top: auto;
   }
   .header-hero__subtitle {
     font-size: 68px;
   }
-  .header-hero__new-title {
-    margin-bottom: 68px;
-  }
   .header-hero__discount {
-    margin-top: 68px;
+    margin-top: 3rem
   }
 }

@@ -148,7 +148,7 @@
     color: var(--accent-color);
 }
 
-.featured-item__link:active {
+.featured-item__link:hover {
     background-color: var(--accent-color);
     color: var(--background-main-color);
 }

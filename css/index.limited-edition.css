@@ -3,6 +3,7 @@
   width: 100%;
   padding-block: 3.5rem;
   background-color: var(--color-bg-section);
+  padding-inline: 1rem;
 
   .rare-timepieces__subtitle-break {
     display: inline;
@@ -20,6 +21,7 @@
       margin-inline: auto;
       padding-inline: 1rem;
       text-align: center;
+      justify-items: center;
 
       .rare-timepieces__title {
         font-size: 0.625rem;
@@ -49,11 +51,17 @@
       }
 
       .rare-timepieces__actions {
-        margin-inline: auto;
+        /*margin-inline: auto;
         max-width: 14rem;
         padding: 1.25rem;
         background-color: var(--button-bg-color);
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;*/
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1.25rem;
+        background-color: var(--button-bg-color);
+        transition: background-color 0.25s ease;
       }
 
       .rare-timepieces__actions:hover {
@@ -101,7 +109,7 @@
           text-align: center;
 
           .watch-card__image {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             display: block;
           }
@@ -147,8 +155,8 @@
         left: -0.5rem;
       }
 
-      .rare-timepieces__control--prev {
-        left: -0.5rem;
+      .rare-timepieces__control--next {
+        right: -0.5rem;
       }
     }
   }
@@ -164,21 +172,28 @@
         margin-inline: 0;
         padding-inline: 0;
         text-align: left;
+        align-items: flex-start;
+        justify-items: start;
 
         .rare-timepieces__title {
-          font-size: 0.8rem;
+          font-size: clamp(0.6rem, 0.8vw, 0.8rem);
         }
 
         .rare-timepieces__subtitle {
-          font-size: 3rem;
+          font-size: clamp(2rem, 3.5vw, 3rem);
         }
 
         .rare-timepieces__lead {
-          font-size: 1.5rem;
+          font-size: clamp(1.1rem, 1.8vw, 1.5rem);
         }
 
         .rare-timepieces__description {
-          font-size: 1rem;
+          font-size: clamp(0.9rem, 1.2vw, 1rem);
+        }
+
+        .rare-timepieces__actions {
+          margin-inline: 0;
+          text-align: center;
         }
       }
 

@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  margin-bottom: -5rem; /* to account for the background image */
+  margin-bottom: -5rem;
 }
 
 .header-hero__title,
@@ -19,7 +19,6 @@
 .header-hero__description {
   font-size: 18px;
 }
-
 
 .header-hero {
   position: relative;
@@ -50,16 +49,9 @@
   z-index: -1;
 }
 
-.header-hero__background .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.header__nav {
-  background: transparent;
-  position: relative;
-  z-index: 2;
-  min-height: 80px;
+.header-hero__col--left, 
+.header-hero__col--right {
+  margin-inline: 2rem;
 }
 
 .header-hero h1.header-hero__title,
@@ -125,18 +117,17 @@
 }
 
 @media (min-width: 64rem) {
-  .header-hero > .container {
+  .header-hero {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     width: 100%;
-    padding: 2rem 64px;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-    gap: 1rem;
   }
-  .header-hero .header-hero__col--left {
+  .header-hero__col--left, 
+  .header-hero__col--right {
+  margin-inline: 7rem;
+  }
+  .header-hero__col--left {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -149,17 +140,11 @@
     align-items: flex-end;
     font-size: 1.1rem;
     gap: 1rem;
-    /* Mirror the left-sided margin on the right */
-    margin-right: 0;
-  }
-  .header-hero__col--right .header-hero__discount {
-    align-self: flex-end;
-    margin-top: auto;
   }
   .header-hero__subtitle {
     font-size: 68px;
   }
   .header-hero__discount {
-    margin-top: 3rem
+    margin-top: 13rem
   }
 }

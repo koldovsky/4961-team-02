@@ -121,11 +121,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 5rem;
     width: 100%;
   }
   .header-hero__col--left, 
   .header-hero__col--right {
-  margin-inline: 7rem;
+  margin-inline: 15rem;
   }
   .header-hero__col--left {
     display: flex;

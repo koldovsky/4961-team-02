@@ -5,6 +5,10 @@
   padding-bottom: 3.5rem;
   background-color: var(--color-bg-section);
 }
+  
+.rare-timepieces__subtitle-break {
+  display: inline;
+  }
 
 .rare-timepieces__content {
   display: flex;
@@ -163,7 +167,7 @@
 @media (min-width: 48rem) {
   .rare-timepieces__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     overflow: hidden;
   }
@@ -181,6 +185,10 @@
   .container {
     max-width: none;
     padding-inline: 2rem;
+  }
+
+  .rare-timepieces__subtitle-break {
+    display: block;
   }
 
   .rare-timepieces__content {
@@ -234,7 +242,7 @@
   }
 
   .rare-timepieces__control {
-    top: 45%;
+    top: 55%;
   }
 
   .rare-timepieces__control--prev {
@@ -242,6 +250,6 @@
   }
 
   .rare-timepieces__control--next {
-    right: 0.5rem;
+    right: -1rem;
   }
 }

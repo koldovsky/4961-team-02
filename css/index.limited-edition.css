@@ -242,17 +242,19 @@
       }
 
       .rare-timepieces__carousel {
-        /*.rare-timepieces__control {
-            top: 50%; } 
+        .rare-timepieces__control {
+            top: 8rem;
+            transform: none; 
+          } 
            
-          .rare-timepieces__control--prev { 
+          /*.rare-timepieces__control--prev { 
             left: 0rem; 
           } 
             
           .rare-timepieces__control--next { 
             right: -1.5rem; 
           }*/
-          
+
         .rare-timepieces__list {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(14rem, max-content));

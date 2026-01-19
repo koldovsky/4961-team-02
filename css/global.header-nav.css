@@ -27,7 +27,6 @@
 
 .header__nav-main > .container {
   padding-inline: 0;
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -160,17 +159,10 @@
 }
 
 @media (min-width: 64rem) {
-  .header__nav {
-    margin-inline: 15rem;
-  }
   .header__banner {
     padding-top: 0.35rem;
     padding-bottom: 0.35rem;
     font-size: 0.75rem;
-    margin-inline: -15rem;
-  }
-  .header__banner > .container {
-    margin-inline: 15rem;
   }
   .header__nav-main > .container {
     flex-direction: row;

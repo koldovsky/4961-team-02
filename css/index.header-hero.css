@@ -7,33 +7,34 @@
 .header-hero__button,
 .header-hero__sale-dates,
 .header-hero__new-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
 }
 
 .header-hero__subtitle {
-  font-size: 42px;
+  font-size: 3.5rem;
   text-transform: uppercase;
 }
 
 .header-hero__description {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .header-hero {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-items: flex-start;
   position: relative;
+  justify-content: space-between;
   z-index: 1;
   color: var(--header-text-color);
   height: 60rem;
-  max-height: 1038px;
-  max-width: inherit;
+  max-height: 82rem;
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
+  margin-bottom: 5rem;
 }
 
 .header-hero__background {
@@ -49,9 +50,8 @@
   z-index: -1;
 }
 
-.header-hero__col--left, 
-.header-hero__col--right {
-  margin-inline: 2rem;
+.header-hero__background > .container {
+  padding-inline: 0;
 }
 
 .header-hero h1.header-hero__title,
@@ -61,7 +61,7 @@
 }
 
 .header-hero__new-title {
-  margin-bottom: 16px;
+  margin-bottom: 1.3rem;
   font-style: italic;
 }
 
@@ -70,23 +70,15 @@
   gap: 1ch;
   align-self: flex-end;
   font-style: italic;
-  margin-top: 24px;
-}
-
-.header-hero {
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  width: auto;
-  max-height: 980px;
-  gap: 1rem;
-  margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 
 .header-hero__button {
   display: inline-block;
   text-decoration: none;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -97,7 +89,6 @@
   border-radius: 4px;
   font-size: 1rem;
   align-self: flex-start;
-  width: auto;
   margin-top: 0.75rem;
 }
 
@@ -124,28 +115,31 @@
     margin-top: 5rem;
     width: 100%;
   }
-  .header-hero__col--left, 
-  .header-hero__col--right {
-  margin-inline: 15rem;
+  .header-hero__background > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 15rem;
   }
-  .header-hero__col--left {
+  .header-hero__col--left,
+  .header-hero__col--right {
     display: flex;
     flex-direction: column;
+  }
+  .header-hero__col--left {
     align-items: flex-start;
     max-width: 40%;
     gap: 2rem;
   }
   .header-hero__col--right {
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
     font-size: 1.1rem;
     gap: 1rem;
   }
   .header-hero__subtitle {
-    font-size: 68px;
+    font-size: 5.5rem;
   }
   .header-hero__discount {
-    margin-top: 13rem
+    margin-top: 13rem;
   }
 }

@@ -103,11 +103,36 @@
           justify-items: center;
           text-align: center;
           margin-inline: auto;
+          position: relative;
 
           .watch-card__image {
             max-width: 100%;
             height: auto;
             display: block;
+          }
+
+          .rare-timepieces__control {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            background-color: transparent;
+            color: var(--sale-tag-color);
+            border: none;
+            place-items: center;
+            cursor: pointer;
+            font-size: 2.2rem;
+          }
+
+          .rare-timepieces__control--prev {
+            left: -0.9rem;
+          }
+
+          .rare-timepieces__control--next {
+            right: -0.9rem;
           }
 
           .watch-card__title,
@@ -128,31 +153,8 @@
         }
       }
 
-      .rare-timepieces__control {
-        visibility: visible;
+      .rare-timepieces__item:first-child .rare-timepieces__control {
         display: flex;
-        position: absolute;
-        top: 45%;
-        transform: translateY(-50%);
-        width: 2.5rem;
-        height: 2.5rem;
-        align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        border: none;
-        color: var(--sale-tag-color);
-        cursor: pointer;
-        z-index: 10;
-        font-size: 2rem;
-        line-height: 1;
-      }
-
-      .rare-timepieces__control--prev {
-        left: -0.5rem;
-      }
-
-      .rare-timepieces__control--next {
-        right: -0.5rem;
       }
     }
   }
@@ -212,11 +214,24 @@
             }
           }
         }
+
+        .rare-timepieces__item:first-child .rare-timepieces__control--next {
+          display: none;
+        }
+
+        .rare-timepieces__item:nth-child(2) .rare-timepieces__control--next {
+          display: flex;
+        }
+
+        .rare-timepieces__item:first-child .rare-timepieces__control--prev {
+          display: flex;
+      }
+
         .rare-timepieces__control {
           top: 25;
         }
         .rare-timepieces__control--prev {
-          left: -1rem;
+          left: -0.5rem;
         }
         .rare-timepieces__control--next {
           right: -1rem;
@@ -253,12 +268,21 @@
         .rare-timepieces__list {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 2rem;
+          gap: 1rem;
+          padding-top: 1rem;
         }
 
         .rare-timepieces__item {
-          max-width: 13rem;
+          max-width: 18rem;
           margin-inline: auto;
+        }
+
+        .rare-timepieces__item:nth-child(2) .rare-timepieces__control--next {
+          display: none;
+       }
+
+        .rare-timepieces__item:nth-child(4) .rare-timepieces__control--next {
+          display: flex;
         }
 
         .rare-timepieces__control {

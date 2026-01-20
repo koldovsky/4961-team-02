@@ -37,7 +37,18 @@ function greet(name, owner) {
   return name === owner ? msgOwner : msgElse;
 }
 
-
+// sevastianov
+function greet (name, owner) {
+   if(typeof name === 'string' && typeof owner === 'string'){
+        if(name.toUpperCase() === owner.toUpperCase()){
+            return "'Hello boss'";
+        } else {
+            return "'Hello guest'";
+        }
+   } else {
+        return null;
+   }
+}
 
 //5
 //www.codewars.com/kata/keep-hydrated-1/train/javascript

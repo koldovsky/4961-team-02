@@ -1,158 +1,176 @@
-.header .header__banner {
-   background-color: var(--accent-color);
-   color: var(--header-text-color);
-   z-index: 3;
-   padding: 1px;
+.header__nav {
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  min-height: 80px;
+  align-items: center;
 }
 
-.header .header__banner > .container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
+.header__banner {
+  background-color: var(--accent-color);
+  color: var(--header-text-color);
+  text-transform: uppercase;
+  z-index: 3;
 }
 
-.header .header__nav-main {
-   display: flex;
-   justify-content: space-between;
-   flex-direction: column;
-   align-content: center;
-   gap: 1rem;
-   color: var(--header-text-color);
-   position: relative;
-   min-height: 70px;
-   max-width: 1200px;
-   margin: auto;
+.header__banner > .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 0;
+}
+
+.header__nav-main {
+  color: var(--header-text-color);
+  position: relative;
+}
+
+.header__nav-main > .container {
+  padding-inline: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Scoped link styling for header */
 .header__nav a,
 .header__banner a {
-   text-decoration: none;
-   color: inherit;
-   transition: opacity 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .header__nav a:hover,
 .header__banner a:hover {
-   opacity: 0.8;
+  opacity: 0.8;
 }
 
 .header__nav a:focus-visible,
 .header__banner a:focus-visible {
-   outline: 2px solid currentColor;
-   outline-offset: 2px;
-   border-radius: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* Use theme accent color on hover/focus for menu and socials */
 .header__menu-link:hover,
 .header__menu-link:focus-visible,
 .header__banner a:hover {
-   color: var(--accent-color);
+  color: var(--header-text-color);
+  font-style: underline;
 }
 
 .header__socials-link:hover,
 .header__socials-link:focus-visible {
-   color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .header__logo {
-   display: inline-block;
-   font-size: 2rem;
-   letter-spacing: 0.05em;
-   transition: opacity 0.2s ease;
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease;
 }
 
 .header__logo:hover {
-   opacity: 0.9;
+  opacity: 0.9;
 }
 
 .header__logo:focus-visible {
-   outline: 2px solid currentColor;
-   outline-offset: 2px;
-   border-radius: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .header__socials-icon {
-   display: inline-block;
-   max-width: none;
-   width: 30px;
-   height: 30px;
-   object-fit: contain;
-   transition: transform 0.2s ease, opacity 0.2s ease;
+  display: inline-block;
+  max-width: none;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .header__socials-link:hover .header__socials-icon {
-   transform: scale(1.1);
-   opacity: 0.9;
-   color: var(--accent-color);
+  transform: scale(1.1);
+  opacity: 0.9;
+  color: var(--accent-color);
 }
 
 .header__socials-link:focus-visible {
-   outline: 2px solid currentColor;
-   outline-offset: 2px;
-   border-radius: 4px;
-   color: var(--accent-color);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 4px;
+  color: var(--accent-color);
 }
 
-.header .header__banner, .header__menu, .header__socials {
-   gap: 0.75rem;
-   list-style-type: none;
-   align-items: center;
-   font-family: 'Montserrat', sans-serif;
-   font-size: 0.7rem;
-   font-weight: bold;
-   color: var(--header-text-color);
+.header__banner,
+.header__menu,
+.header__socials {
+  gap: 0.75rem;
+  list-style-type: none;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--header-text-color);
 }
 
-.header .header__menu, .header__socials {
-   display: inline-flex;
+.header__logo,
+.header__menu,
+.header__socials {
+  display: inline-flex;
 }
 
 .header__menu-link {
-   position: relative;
-   padding: 0.25rem 0;
-   transition: opacity 0.2s ease;
+  position: relative;
+  transition: opacity 0.2s ease;
 }
 
 .header__menu-link:hover {
-   opacity: 0.8;
-   color: var(--accent-color);
+  opacity: 0.8;
+  color: var(--accent-color);
 }
 
 .header__menu-link::after {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 0;
-   height: 2px;
-   background-color: currentColor;
-   transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
 }
 
 .header__menu-link:hover::after {
-   width: 100%;
+  width: 100%;
 }
 
 .header__menu-link:focus-visible {
-   outline: 2px solid currentColor;
-   outline-offset: 2px;
-   border-radius: 2px;
-   color: var(--accent-color);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+  color: var(--accent-color);
 }
 
 @media (min-width: 64rem) {
-   .header__banner {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-   }
-   .header .header__nav-main {
+  .header__banner {
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    font-size: 0.75rem;
+  }
+  .header__nav-main > .container {
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  }
+  .container > .header__menu,
+  .container > .header__logo,
+  .container > .header__socials {
+    flex-direction: row;
+    padding: 0;
   }
 }

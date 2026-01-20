@@ -1,17 +1,37 @@
 /* Bilan Andrii */
 .featured-item{
-    outline: 1px solid red;
+    /*outline: 1px solid red;
+    margin: 0 auto;*/
     min-width: 320px;
-    max-width: 400px;
+    background-color: var(--header-text-color);
+    max-width: 1920px;
     margin: 0 auto;
+    @media (min-width: 768px) {
+        display: flex;
+        max-height: 1039px;
+    }
+    @media (min-width: 992px) {
+        max-height: 844px;
+        
+    }
 }
 
 .featured-item__main{
     padding: 90px 30px 90px 30px;
+    text-align: center;
+    @media (min-width: 768px) {
+        padding: 105px 50px 105px 50px;
+        text-align: left;
+    }
+    @media (min-width: 992px) {
+        padding: 120px 30px 120px 30px;
+        text-align: left;
+        max-width: 600px;
+        margin-inline: auto;
+    }
 }
 
 .featured-item__title {
-    text-align: center;
     color: var(--accent-color);
     font-size: 10px;
     font-family: var(--secondary-font-family), sans-serif;
@@ -23,7 +43,6 @@
 .featured-item__subtitle {
     margin-top: 20px;
     color: var(--text-color);
-    text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     line-height: 36px;
@@ -31,11 +50,18 @@
     .featured-item__subtitle-main {
     font-style: italic;
     }
+    @media (min-width: 768px) {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    @media (min-width: 992px) {
+        font-size: 52px;
+        line-height: 52px;
+    }
 }
 
 .featured-item__price{
     margin-top: 25px;
-    text-align: center;
     .featured-item__price-text {
     font-style: italic;
     }
@@ -44,14 +70,16 @@
 
 .featured-item__description {
     margin-top: 20px;
-    text-align: center;
     color: var(--secondary-text-color);
     font-size: 18px;
     font-family: var(--main-font-family), sans-serif;
     line-height: 23.4px;
+    @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
 .featured-item__details {
-    text-align: center;
     margin-top: 25px;
 }
 
@@ -62,6 +90,10 @@
     color: var(--secondary-text-color);
     font-family: var(--secondary-font-family), sans-serif;
     line-height: 21px;
+    @media (min-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 .featured-item__price-text {
@@ -74,25 +106,39 @@
     font-family: var(--secondary-font-family), sans-serif;
     font-weight: 700;
     background-color: var(--accent-color);
-    line-height: 33px;    
+    line-height: 33px;
+    @media (min-width: 768px) {
+        font-size: 24px;
+        line-height: 36px;
+    }   
 }
 
 .featured-item__features {
-    text-align: center;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 11px;
     
+    
 }
 
 .featured-item__feature {
     padding: 2.5px;
+    @media (min-width: 768px) {
+        flex-basis: 50%;
 }
-
+    
+}
+.featured-item__feature-groups {
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-around;
+    }
+}
 .featured-item__link-container {
-    text-align: center;
     margin-top: 30px;
 }
 .featured-item__link {
@@ -102,7 +148,7 @@
     color: var(--accent-color);
 }
 
-.featured-item__link:active {
+.featured-item__link:hover {
     background-color: var(--accent-color);
     color: var(--background-main-color);
 }
@@ -126,5 +172,10 @@
     width: 100%;
     aspect-ratio: 320 / 192;
     object-fit: cover;
+    @media (min-width: 768px) {
+        width: 50%;
+        aspect-ratio: 384 / 1039;
+        margin-top: 0;
+    }
     
 }

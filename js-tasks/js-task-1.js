@@ -19,6 +19,15 @@ function move(position, roll) {
   return position + roll * 2;
 }
 
+// sevastianov
+function move(position, roll){
+  if(roll >=1 && roll < 7){
+    return position + roll * 2
+  }
+  return position;
+}
+
+
 //4
 //www.codewars.com/kata/grasshopper-personalized-message/train/javascript
 
@@ -27,6 +36,8 @@ function greet(name, owner) {
   const msgElse = "Hello guest";
   return name === owner ? msgOwner : msgElse;
 }
+
+
 
 //5
 //www.codewars.com/kata/keep-hydrated-1/train/javascript

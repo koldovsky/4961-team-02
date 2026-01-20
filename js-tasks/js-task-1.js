@@ -10,3 +10,8 @@ function makeNegative(num) {
   return num > 0 ? -num : num;
 }
 
+//www.codewars.com/kata/grasshopper-terminal-game-move-function/train/javascript
+
+function move(position, roll) {
+  return position + roll * 2;
+}

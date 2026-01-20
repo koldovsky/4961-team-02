@@ -20,7 +20,7 @@ function move(position, roll) {
 }
 
 // sevastianov
-function move(position, roll){
+function move(position = 0, roll = 0){
   if(roll >=1 && roll < 7){
     return position + roll * 2
   }

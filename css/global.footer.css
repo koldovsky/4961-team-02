@@ -1,12 +1,12 @@
 .footer {
-  --description-text-color: #f7f8fa;
-  --text-color-white: #ffffff;
-  --line-color: #3e3e3e;
-  --text-menu-item-color: #b7b7ad;
-  --text-placeholder-color: #7d7d7d;
-  --background-input-color: #272727;
-  --background-footer-color: #0e0e0e;
-  background-color: var(--background-footer-color);
+  --footer-description-text-color: #f7f8fa;
+  --footer-text-color-white: #ffffff;
+  --footer-line-color: #3e3e3e;
+  --footer-text-menu-item-color: #b7b7ad;
+  --footer-text-placeholder-color: #7d7d7d;
+  --footer-background-input-color: #272727;
+  --footer-background-color: #0e0e0e;
+  background-color: var(--footer-background-color);
   width: 100%;
 
   @media (max-width: 767px) {
@@ -16,6 +16,7 @@
   .footer__content-container {
     max-width: 1200px;
     height: 380px;
+    padding: 80px 15px 30px 15px;
     margin: auto;
 
     @media (max-width: 767px) {
@@ -25,7 +26,7 @@
     .footer__content-nav-container {
       display: flex;
       justify-content: space-between;
-      padding: 80px 15px 30px 15px;
+      padding-bottom: 25px;
 
       @media (max-width: 767px) {
         flex-direction: column;
@@ -50,26 +51,46 @@
         font-family: var(--main-font-family);
 
         @media (max-width: 767px) {
+          font-size: 20px;
           margin: 0;
           text-align: center;
         }
       }
       .footer__socials-icons-container {
         display: flex;
+        flex-wrap: wrap;
         width: 70%;
         justify-content: space-between;
+
+        @media (max-width: 767px) {
+          width: 185px;
+        }
       }
       .footer__socials-description {
-        color: var(--description-text-color);
+        color: var(--footer-description-text-color);
 
         @media (max-width: 767px) {
           text-align: center;
         }
       }
+      .icon-socials {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+      }
+      .image-icon {
+        width: 100%;
+        height: 100%;
+      }
       .footer__image-line {
         width: 42px;
         height: 4px;
         background-color: var(--accent-color);
+
+        @media (max-width: 767px) {
+          min-width: 15%;
+          max-width: 70%;
+        }
       }
       .footer__socials-description {
         font-size: 15px;
@@ -78,17 +99,18 @@
       .footer__link {
         font-size: 14px;
         font-family: var(--secondary-font-family);
-        color: var(--text-menu-item-color);
+        color: var(--footer-text-menu-item-color);
         transition: color 0.3s ease-in-out;
       }
       .footer__link:hover {
-        color: var(--text-color-white);
+        color: var(--footer-text-color-white);
       }
 
       .footer__item-container,
       .footer__socials-container {
         width: 240px;
         min-height: 160px;
+        max-height: 160px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -122,25 +144,27 @@
 
           @media (max-width: 767px) {
             width: 100%;
+            height: 136px;
             margin-top: 10%;
           }
 
           .footer__form-input {
-            width: 210px;
+            width: 100%;
             height: 50px;
             padding: 15px 26px;
-            background-color: var(--background-input-color);
+            background-color: var(--footer-background-input-color);
             border: 0;
 
             @media (max-width: 767px) {
               width: 100%;
+              margin-bottom: 30px;
             }
           }
           .footer__form-input::placeholder {
-            color: var(--text-placeholder-color);
+            color: var(--footer-text-placeholder-color);
           }
           .footer__form-button {
-            width: 210px;
+            width: 100%;
             height: 51px;
             font-size: 15px;
             font-family: var(--secondary-font-family);
@@ -154,7 +178,7 @@
           .footer__form-button:hover {
             cursor: pointer;
             border: 0;
-            color: var(--text-color-white);
+            color: var(--footer-text-color-white);
             background-color: var(--button-bg-color);
           }
         }
@@ -163,7 +187,7 @@
     .footer__line {
       width: 100%;
       height: 1px;
-      background-color: var(--line-color);
+      background-color: var(--footer-line-color);
     }
     .footer__authorship-container {
       display: flex;
@@ -176,13 +200,13 @@
       @media (max-width: 767px) {
         flex-direction: column;
         min-height: 80px;
-              justify-content: space-between;
-              align-items: center;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .footer__authorship-icon-container,
       .footer__authorship-description {
-        color: var(--description-text-color);
+        color: var(--footer-description-text-color);
         font-size: 12px;
         font-family: var(--secondary-font-family);
         font-weight: 800;

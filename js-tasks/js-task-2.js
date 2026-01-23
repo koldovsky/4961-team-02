@@ -75,3 +75,18 @@ const doubleInteger = i => i * 2;
 //6
 //www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript
 const twiceAsOld = (dadYearsOld, sonYearsOld) => Math.abs(dadYearsOld - (sonYearsOld * 2));
+
+//7
+//www.codewars.com/kata/5933a1f8552bc2750a0000ed/train/javascript
+const nthEven = (n) => (n - 1) * 2;
+
+//8
+//www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+const past = (h,m,s) => {
+  const allTime = s + (m * 60) + (h * 60 * 60);
+  return allTime * 1000;
+};
+
+//9
+//www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;

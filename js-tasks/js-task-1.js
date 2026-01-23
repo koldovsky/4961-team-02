@@ -19,13 +19,6 @@ function move(position, roll) {
   return position + roll * 2;
 }
 
-// sevastianov
-function move(position = 0, roll = 0){
-  if(roll >=1 && roll < 7){
-    return position + roll * 2
-  }
-  return position;
-}
 
 
 //4
@@ -37,18 +30,6 @@ function greet(name, owner) {
   return name === owner ? msgOwner : msgElse;
 }
 
-// sevastianov
-function greet (name, owner) {
-   if(typeof name === 'string' && typeof owner === 'string'){
-        if(name.toUpperCase() === owner.toUpperCase()){
-            return "'Hello boss'";
-        } else {
-            return "'Hello guest'";
-        }
-   } else {
-        return null;
-   }
-}
 
 //5
 //www.codewars.com/kata/keep-hydrated-1/train/javascript

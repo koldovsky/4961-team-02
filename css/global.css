@@ -3,7 +3,9 @@
 /*font-family: 'Montserrat', sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /*font-family: 'Rubik', sans-serif;*/
-
+<style>
+@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP&display=swap');
+</style>
 *,
 *::after,
 *::before {

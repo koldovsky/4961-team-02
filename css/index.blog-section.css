@@ -105,7 +105,7 @@
 .blog__article-date {
   display: block;
   font-size: 0.875rem;
-  color: var(--accent-color);
+  color: #666;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -126,7 +126,7 @@
 }
 
 .blog__article-link {
-  color: var(--link-color);
+  color: #666;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;

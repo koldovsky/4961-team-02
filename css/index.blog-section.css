@@ -1,0 +1,114 @@
+.blog {
+  padding: 5.625rem 1.5rem 3.75rem;
+  text-align: center;
+
+  @media (min-width: 48rem) {
+    padding: 6.5625rem 2rem 3.75rem;
+  }
+
+  @media (min-width: 64rem) {
+    padding: 7.5rem 2.5rem 3.75rem;
+  }
+}
+
+.blog__info {
+  width: 100%;
+  margin-bottom: 3rem;
+
+  .blog__info-title {
+        color: var(--accent-color);
+        font-family: var(--secondary-font-family);
+        font-size: 0.625rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 1.3;
+        letter-spacing: 0.1875rem;
+        margin-bottom: 1.5625rem
+    }
+
+  .blog__info-subtitle {
+        color: var(--text-color);
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+
+        @media (min-width: 48rem) {
+            font-size: 2.8125rem;
+            margin-bottom: 1.5625rem;
+        }
+
+        @media (min-width: 64rem) {
+            font-size: 3.25rem;
+        }
+    }
+
+  .blog__info-description {
+    color: #666;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.blog__articles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.blog__article {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  &-image {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 15px;
+  }
+
+  &-date {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &-heading {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &-text {
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog__articles {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}

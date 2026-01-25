@@ -83,6 +83,7 @@
   color: #666;
   margin-bottom: 10px;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .blog__article-heading {
@@ -90,7 +91,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .blog__article-media {
@@ -110,7 +111,7 @@
 .blog__article-text {
   color: #555;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
 }
 

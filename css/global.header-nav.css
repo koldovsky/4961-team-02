@@ -2,8 +2,6 @@
   background: transparent;
   position: relative;
   z-index: 2;
-  min-height: 80px;
-  align-items: center;
 }
 
 .header__banner {
@@ -22,14 +20,125 @@
 
 .header__nav-main {
   color: var(--header-text-color);
-  position: relative;
+  margin-top: 2rem;
 }
 
 .header__nav-main > .container {
   padding-inline: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Burger Menu Button */
+.header__burger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin-left: auto;
+  position: relative;
+}
+
+.header__burger-line {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: var(--header-text-color);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.header__burger-btn[aria-expanded="true"] .header__burger-line:first-child {
+  transform: rotate(45deg);
+}
+
+.header__burger-btn[aria-expanded="true"] .header__burger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.header__burger-btn[aria-expanded="true"] .header__burger-line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.header__burger-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Mobile Menu Container - Fullscreen Overlay */
+.header__mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-section);
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.header__mobile-menu[aria-hidden="false"] {
+  display: flex;
+}
+
+.header__mobile-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.header__mobile-banner .header__banner-text,
+.header__mobile-banner .header__banner-contact-text {
+  margin: 0;
+  color: var(--header-text-color);
+  font-family: var(--secondary-font-family), sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.header__mobile-menu .header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__mobile-menu .header__menu-link {
+  font-size: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.header__mobile-menu .header__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Scoped link styling for header */
@@ -114,16 +223,20 @@
   gap: 0.75rem;
   list-style-type: none;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--secondary-font-family), sans-serif;
   font-size: 0.7rem;
   font-weight: bold;
   color: var(--header-text-color);
 }
 
-.header__logo,
+.header__logo {
+  display: inline-flex;
+}
+
+.header__banner,
 .header__menu,
 .header__socials {
-  display: inline-flex;
+  display: none;
 }
 
 .header__menu-link {
@@ -160,16 +273,44 @@
 
 @media (min-width: 64rem) {
   .header__banner {
+    display: block;
     padding-top: 0.35rem;
     padding-bottom: 0.35rem;
     font-size: 0.75rem;
   }
-  .header__nav-main > .container {
-    flex-direction: row;
+
+  .header__nav {
+    display: block;
   }
-  .container > .header__menu,
+
+  .header__nav-main > .container {
+    gap: 0;
+  }
+  
+  /* Hide burger button on desktop */
+  .header__burger-btn {
+    display: none;
+  }
+
+  .header__mobile-menu {
+    display: contents;
+  }
+  
+  .header__mobile-banner {
+    display: none;
+  }
+  
+  /* Show regular menu and socials on desktop */
+  .header__mobile-menu .header__menu,
+  .header__mobile-menu .header__socials {
+    display: inline-flex;
+    flex-direction: row;
+    padding-top: 0;
+    border: 0;
+  }
+  
   .container > .header__logo,
-  .container > .header__socials {
+  .container > .header__mobile-menu {
     flex-direction: row;
     padding: 0;
   }

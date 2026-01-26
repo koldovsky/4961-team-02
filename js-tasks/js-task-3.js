@@ -7,9 +7,7 @@ const circleCircumference = circle => {
 //2. Training JS #12: loop statement --for..in and for..of
 //www.codewars.com/kata/training-js-number-12-loop-statement-for-dot-in-and-for-dot-of/train/javascript
 function giveMeFive(obj){
-  
   const resultArray = [];
-  
   for(const key in obj) {
     if(key.length === 5) {
       resultArray.push(key);
@@ -18,11 +16,20 @@ function giveMeFive(obj){
       resultArray.push(obj[key]);
     }
   }
-  
   return resultArray;
 }
 
 //3. Understanding closures - the basics
+//www.codewars.com/kata/understanding-closures-the-basics/train/javascript
+function buildFun(n){
+	let res = []
+	for (let i = 0; i <= n; i++){
+		res.push(function(){
+			return i;
+		})
+	}
+	return res
+}
 
 //4. Fun with ES6 Classes #2 - Animals and Inheritance
 // Get Coding :)

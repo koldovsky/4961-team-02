@@ -1,11 +1,7 @@
 .blog {
 
-    /* box-sizing: border-box;
-  width: 100%; */
-  padding: 3.5rem 1rem; /* base mobile padding */
+  padding: 3.5rem 1rem; 
 
-
-  /* padding: 5.625rem 1.5rem 3.75rem; */
   text-align: center;
 }
 
@@ -66,43 +62,11 @@
 
 .blog__articles {
 display: grid;
-grid-template-columns: 1fr; /* 馃攽 mobile-first */
+grid-template-columns: 1fr; 
 gap: 2rem;
 margin-top: 2rem;
 text-align: left;
 
-
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* display: grid; */
-  /* grid-template-columns: 1fr;  */
-  /* 馃攽 mobile-first */
-  /* grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(100%, 22rem), 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  text-align: left;
-  padding-bottom: 1rem;
-  justify-content: center;  */
-  /* 馃攽 褑械薪褌褉懈褉褍械屑 泻邪褉褌芯褔泻懈 */
-  /* justify-content: flex-start; */
-  /* flex-wrap: nowrap; */
-
-  /* display: grid; */
-/* 袗胁褌芯屑邪褌懈褔械褋泻懈 锌芯写斜懈褉邪械屑 泻芯谢懈褔械褋褌胁芯 泻芯谢芯薪芯泻 */
-/* grid-template-columns: repeat( */
-/* auto-fit,  */
-/* auto-fit 锌芯写斜懈褉邪械褌 泻芯谢-胁芯 泻芯谢芯薪芯泻 */
-/* minmax(20rem, 1fr)  */
-/* 屑懈薪懈屑褍屑 20rem, 屑邪泻褋懈屑褍屑 1fr */
-/* ); */
-/* gap: 2rem;  */
-/* 锌褉芯屑械卸褍褌泻懈 屑械卸写褍 泻邪褉褌芯褔泻邪屑懈 */
-/* margin-top: 2rem;
-justify-content: center;  */
-/* 褑械薪褌褉懈褉褍械褌 泻邪卸写褍褞 褋褌褉芯泻褍 */
-/* align-items: stretch; 泻邪褉褌芯褔泻懈 芯写懈薪邪泻芯胁芯泄 胁褘褋芯褌褘 */
 }
 
 .blog__article {
@@ -111,17 +75,8 @@ justify-content: center;  */
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  /* align-items: stretch;
-  margin: 1.5rem 0;
-  box-sizing: border-box;
-  padding: 0 0.25rem; */
   font-family: var(--secondary-font-family);
 
-  /* display: flex; */
-/* flex-direction: column; */
-/* height: 100%; */
-/* font-family: var(--secondary-font-family); */
-/* max-width: 100%; */
 }
 
 .blog__article-date {
@@ -163,17 +118,9 @@ justify-content: center;  */
 .blog__article-link:hover,
 .blog__article-link:focus-visible {
   text-decoration-line: underline;
-  /* text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.15em; */
+ 
 }
 
-/* @media (max-width: 768px) {
-  .blog__articles {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-} */
 @media (min-width: 48rem) {
   .blog__articles {
     grid-template-columns: repeat(2, 1fr);

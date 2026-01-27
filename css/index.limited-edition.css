@@ -68,9 +68,8 @@
 
   .rare-timepieces__carousel {
     position: relative;
-    overflow: hidden;
     min-width: 0;
-
+    
     .rare-timepieces__list {
       display: flex;
       gap: 1rem;
@@ -87,12 +86,15 @@
 
     .rare-timepieces__item {
       scroll-snap-align: start;
-      flex: 0 0 auto;
+      flex: 0 0 100%;
     }
 
     .watch-card {
-      width: 80vw;
+      /*width: 80vw;
       min-width: 17rem;
+      box-sizing: border-box;*/
+      width: 100%;
+      max-width: 34rem;
       box-sizing: border-box;
 
       .watch-card__image {
@@ -197,6 +199,7 @@
 
       .rare-timepieces__carousel {
         align-items: center;
+        overflow: hidden;
 
         .rare-timepieces__list {
           display: grid;

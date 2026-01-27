@@ -206,7 +206,7 @@
 
           .watch-card {
             width: 100%;
-            min-width: none;
+            min-width: 0;
           }
         }
 

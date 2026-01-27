@@ -141,11 +141,6 @@
   width: 100%;
   aspect-ratio: 320 / 192;
   object-fit: cover;
-<<<<<<< HEAD
-  border-radius: 4px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-=======
   @media (min-width: 768px) {
     width: 50%;
     aspect-ratio: 384 / 1039;
@@ -221,4 +216,3 @@
     padding: 1rem 1.5rem;
   }
 }
->>>>>>> a1cf48b17b094cf3ed5dad903f8e1958881d2d45

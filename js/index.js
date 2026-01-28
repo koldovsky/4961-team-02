@@ -1,11 +1,14 @@
 function init() {
-    import('./index.limited-edition.js');
+  import("./index.about-section.js");
+  import("./index.limited-edition.js");
 }
 
-const totalPartials = document.querySelectorAll('[hx-trigger="load"], [data-hx-trigger="load"]').length;
+const totalPartials = document.querySelectorAll(
+  '[hx-trigger="load"], [data-hx-trigger="load"]',
+).length;
 let loadedPartialsCount = 0;
 
-document.body.addEventListener('htmx:afterOnLoad', () => {
-    loadedPartialsCount++;
-    if (loadedPartialsCount === totalPartials) init();
+document.body.addEventListener("htmx:afterOnLoad", () => {
+  loadedPartialsCount++;
+  if (loadedPartialsCount === totalPartials) init();
 });

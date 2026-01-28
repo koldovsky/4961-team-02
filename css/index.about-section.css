@@ -3,6 +3,7 @@
   background-color: var(--header-text-color);
   max-width: 1920px;
   margin: 0 auto;
+  overflow: hidden;
   @media (min-width: 768px) {
     display: flex;
     max-height: 1039px;

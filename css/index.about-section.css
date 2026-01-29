@@ -117,7 +117,7 @@
 }
 .about__btn--primary {
   background-color: var(--color-bg-section);
-  color: #fff;
+  color: var(--button-text-color);
   border: none;
   text-decoration: none;
 }

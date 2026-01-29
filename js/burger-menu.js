@@ -1,5 +1,5 @@
 // Burger menu toggle functionality
-function initBurgerMenu() {
+export function initBurgerMenu() {
     const burgerBtn = document.querySelector(
     '[data-js-burger-btn]:not(.is-init)'
     );
@@ -33,9 +33,3 @@ function initBurgerMenu() {
       });
     });
 }
-
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', initBurgerMenu);
-
-// Re-initialize after HTMX swaps content (for dynamic content loading)
-document.body.addEventListener('htmx:afterSwap', initBurgerMenu);

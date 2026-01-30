@@ -12,7 +12,7 @@ if (aboutSection) {
         }
       });
     },
-    { threshold: 0.1 }, // При 10% видимості секції
+    { threshold: 0.1 }, // 
   );
   observer.observe(aboutSection);
 }

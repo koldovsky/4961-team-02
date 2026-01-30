@@ -45,6 +45,8 @@
   --secondary-font-family: "Montserrat";
   /*outline: 1px solid red;*/
   --separator: #eaeaea;
+  --indicator-left: 0;
+  --indicator-width: 0;
   scroll-behavior: smooth;
 }
 

@@ -61,6 +61,19 @@
     margin-bottom: 1.875rem;
     /* overflow: auto; */
 
+    &::after {
+        content:"";
+        position:absolute;
+        bottom:-0.0625rem;
+        left: var(--indicator-left, 0px);
+        width: var(--indicator-width, 0px);
+        height: 0.0625rem;
+        background-color: var(--accent-color);
+        border-radius: 0.25rem;
+        transition-property: left, width;
+        transition: 350ms ease;
+    }
+
     > button {
         font-family: inherit;
         position: relative;
@@ -74,11 +87,12 @@
             font-size: 1.125rem;
         }
 
-        &:hover {
+        &:hover,
+        .button.is-active {
             color: var(--accent-color);
         }
 
-        &:first-child::after {
+        /* &:first-child::after {
             content: " ";
             position: absolute;
             bottom: -0.0625rem;
@@ -87,7 +101,7 @@
             height: 0.0625rem;
             background-color: var(--accent-color);
             border-radius: 0.25rem;
-        }
+        } */
 
     }
 }
@@ -123,6 +137,10 @@
             > div {
                 position: relative;
                 aspect-ratio: 1 / 1;
+
+                >img {
+                    height: 100%;
+                }
 
                 
                 .catalog__list-item-link-sale-tag {

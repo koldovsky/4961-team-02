@@ -6,6 +6,7 @@ function initComponents() {
 function init() {
   import("./index.about-section.js");
   import("./index.limited-edition.js");
+  import("./index.catalog-section.js");
 }
 
 const totalPartials = document.querySelectorAll(

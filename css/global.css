@@ -33,6 +33,7 @@
   --background-main-color: #f7f8fa;
   /*Колір заднього фону секції*/
   --color-bg-section: #0b0b0b;
+  --cart-overlay-color: rgba(0, 0, 0, 0.7);
   /* Колір sale тегу */
   --sale-tag-bg-color: #464c5c;
   --sale-tag-color: #ffffff;

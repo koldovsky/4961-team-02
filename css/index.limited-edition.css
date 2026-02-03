@@ -129,6 +129,8 @@
         color: var(--sale-tag-color);
         text-decoration: none;
         margin-top: 0.6rem;
+        background-color: transparent;
+        border: none;
       }
 
       .watch-card__link:hover {
@@ -162,6 +164,55 @@
     }
   }
 }
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--cart-overlay-color);
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.cart-overlay--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart {
+  background: var(--light-text-color);
+  color: var(--header-text-color);
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.cart__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--header-text-color);
+}
+
+.cart__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cart__text {
+  margin-bottom: 2rem;
+}
+
 
 @media (min-width: 48rem) {
   .rare-timepieces {

@@ -63,3 +63,28 @@ function initRareTimepiecesCarousel() {
 
 initRareTimepiecesCarousel();
 document.body.addEventListener("htmx:afterOnLoad", initRareTimepiecesCarousel);
+
+
+document.body.addEventListener('click', (e) => {
+  const buyBtn = e.target.closest('.watch-card__link');
+  if (!buyBtn) return;
+
+  const card = buyBtn.closest('.watch-card');
+  const title = card.querySelector('.watch-card__title')?.textContent;
+
+  const overlay = document.querySelector('.cart-overlay');
+  overlay.querySelector('.cart__plan').textContent = title;
+
+  overlay.classList.add('cart-overlay--active');
+});
+
+document.body.addEventListener('click', (e) => {
+  if (
+    e.target.closest('.cart__close') ||
+    e.target.closest('.cart__ok')
+  ) {
+    document
+      .querySelector('.cart-overlay')
+      .classList.remove('cart-overlay--active');
+  }
+});
